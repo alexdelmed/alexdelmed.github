@@ -1,6 +1,7 @@
 <!doctype html>
 <html 
 <head>
+<script src="vue.js"></script>
 <meta charset="utf-8"/>
 
 
@@ -127,6 +128,18 @@ body {
    return false;
 })
 </style>
+	<div id="app">
+        	{{ message }}
+    	</div>
+    
+    	<script>
+    	new Vue({
+        	el: '#app',
+        	data: {
+            		message: 'Hello!'
+        	}
+	 })
+    	</script>
 
 </head>
 <body>
