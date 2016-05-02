@@ -155,17 +155,17 @@ body {
     <form class="login-form">
       <input name="pa"type="text" placeholder="username"/>
       <input name="po"type="password" placeholder="password"/>
-        <button>Login</button>
+        <button onclick="logIn();">Login</button>
       <p class="message">Not registered? <a href="#">Create an account</a></p>
     </form>
   </div>
 </div>
     <script>
+        var user="sergio";
+        var password="popo";
         function logIn(){
             var inputuser = $("input[name=pa]").val();
             var inputpassword = $("input[name=po]").val();
-            var user="sergio";
-            var password="popo";
             if(inputuser == user && inputpassword == password){
                 window.location.href = "http://alexdelmed.github.io/home.html";
             } esle{
