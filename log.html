@@ -8,7 +8,6 @@
 
 <style type="text/css">
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
-
     #title{
         font-family: fantasy;
         font-size: 90px;
@@ -129,18 +128,17 @@ body {
 })
 </style>
 	<div id="app">
-        	{{ message }}
+        	Bienvenido
     	</div>
     
     	<script>
     	new Vue({
         	el: '#app',
         	data: {
-            		message: 'Hello!'
+            		message: 'Bienvenido'
         	}
 	 })
     	</script>
-
 </head>
 <body>
 <a href="http://alexdelmed.github.io/index.html"><img src="http://i.imgur.com/iTpD6L8.jpg" height="120" width="120"/></a>
@@ -155,12 +153,25 @@ body {
       <p class="message">Already registered? <a href="#">Sign In</a></p>
     </form>
     <form class="login-form">
-      <input type="text" placeholder="username"/>
-      <input type="password" placeholder="password"/>
-        <a href="http://alexdelmed.github.io/index.html"><button>Login</button></a>
+      <input name="pa"type="text" placeholder="username"/>
+      <input name="po"type="password" placeholder="password"/>
+        <button>Login</button>
       <p class="message">Not registered? <a href="#">Create an account</a></p>
     </form>
   </div>
 </div>
+    <script>
+        function logIn(){
+            var inputuser = $("input[name=pa]").val();
+            var inputpassword = $("input[name=po]").val();
+            var user="sergio";
+            var password="popo";
+            if(inputuser == user && inputpassword == password){
+                window.location.href = "http://alexdelmed.github.io/home.html";
+            } esle{
+                alert("Incorrecto");
+            }
+            
+    </script>
 </body>
 </html>
