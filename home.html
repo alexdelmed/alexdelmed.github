@@ -5,19 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Sumas101 | MiPerfil</title>
 <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+		<script src="vue.js"></script>
+		<script src="home.js"></script>
 </head>
-<body>
+<body onload="load1()">
 <div class="off-canvas-wrapper">
 <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
-<div class="off-canvas position-left reveal-for-large" id="my-info" data-off-canvas data-position="left">
+<div class="rowColumnleft" id="my-info" data-off-canvas data-position="left">
 <div class="row column" id="columnaPerfil">
 <br>
 <img class="thumbnail" src="http://i.imgur.com/cB8DB3u.png">
 <h5>Juan Pérez</h5>
-<p> Edad: 7 años.<br/>
-	Escuela: Colegio Anáhuac Chapalita.<br/>
-	Nacionalidad: Mexicano.
-</p>
+
+	<div id="Edad">
+	<p>Edad: {{ message }} años.</p>
+	<input v-model="message">
+	</div>
+
+	<div id="Escuela">
+	<p>Escuela: {{ message }}.</p>
+	<input v-model="message">
+	</div>
+	
+	<div id="Nacionalidad">
+	<p>Nacionalidad: {{ message }}.</p>
+	<input v-model="message">
+	</div>
+	<div id="example">
+  <button v-on:click="greet">Guardar cambios</button>
+</div>
+
 </div>
 </div>
 <div class="off-canvas-content" data-off-canvas-content>
@@ -27,7 +44,7 @@
 <span class="title-bar-title">Juan Pérez</span>
 </div>
 </div>
-<div class="callout primary">
+<div class="rowColumnMiddle">
 <div class="row column">
 <h1>Este es tu perfil, revisa todo tu progreso!</h1>
 <p class="lead">Aquí encuentras tu información, tus logros y tu progreso en general :)</p>
