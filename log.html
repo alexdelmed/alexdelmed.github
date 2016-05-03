@@ -117,7 +117,7 @@ body {
     <script url="code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 	  <script type="text/javascript" src="http://www.google-analytics.com/analytics.js"></script>
     <script url="code.jquery.com/jquery-1.10.2.js"></script>
-<style>
+<!--<style>
     $('.message a').click(function(){
    $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
 });
@@ -126,7 +126,7 @@ body {
    window.location.href = url
    return false;
 })
-</style>
+</style>-->
 	<div id="app">
         	Bienvenido
     	</div>
@@ -141,36 +141,37 @@ body {
     	</script>
 </head>
 <body>
-<a href="http://alexdelmed.github.io/index.html"><img src="http://i.imgur.com/iTpD6L8.jpg" height="120" width="120"/></a>
+<a href="http://alexdelmed.github.io/home.html"><img src="http://i.imgur.com/iTpD6L8.jpg" height="120" width="120"/></a>
 <div id="title"> SUMAS 101</div>
 <div class="login-page">
   <div class="form">
-    <form class="register-form">
-      <input type="text" placeholder="name"/>
-      <input type="password" placeholder="password"/>
-      <input type="text" placeholder="email address"/>
-      <button>create</button>
-      <p class="message">Already registered? <a href="#">Sign In</a></p>
-    </form>
-    <form class="login-form">
+    <form class="login-form" name="form">
       <input name="pa"type="text" placeholder="username"/>
       <input name="po"type="password" placeholder="password"/>
-        <button onclick="logIn();">Login</button>
+        
       <p class="message">Not registered? <a href="#">Create an account</a></p>
     </form>
+    <button id="pinchBoton">Login</button>
   </div>
+    
 </div>
+    
     <script>
+        $("#pinchBoton").on("click", function(){
+            logIn();
+        });
+        
         var user="sergio";
-        var password="popo";
+        var password="pop";
         function logIn(){
             var inputuser = $("input[name=pa]").val();
             var inputpassword = $("input[name=po]").val();
-            if(inputuser == user && inputpassword == password){
+            if(unputuser == user){
                 window.location.href = "http://alexdelmed.github.io/home.html";
-            } esle{
+            } else{
                 alert("Incorrecto");
             }
+        }
             
     </script>
 </body>
